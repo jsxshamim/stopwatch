@@ -33,7 +33,7 @@ const stop = () => {
 
 const stopwatch = () => {
     if (isCounting) {
-        count = count + 1;
+        count++;
 
         cnt.innerHTML = count < 10 ? "0" + count : count;
         sec.innerHTML = second < 10 ? "0" + second : second;
@@ -42,13 +42,13 @@ const stopwatch = () => {
 
         if (count === 100) {
             count = 0;
-            second = second + 1;
+            second++;
             if (second > 60) {
                 second = 1;
-                minute = minute + 1;
+                minute++;
                 if (minute > 60) {
                     minute = 1;
-                    hour = hour + 1;
+                    hour++;
                 }
             }
         }
